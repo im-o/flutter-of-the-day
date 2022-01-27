@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_of_the_day/data/model/widget_model.dart';
 import 'package:flutter_of_the_day/widgets/bottom_nav_bar.dart';
+import 'package:flutter_of_the_day/widgets/flexible_widget_page.dart';
 import 'package:flutter_of_the_day/widgets/future_builder.dart';
 import 'package:flutter_of_the_day/widgets/search_bar.dart';
 import 'package:flutter_of_the_day/widgets/sliver_app_bar.dart';
@@ -29,6 +30,7 @@ class _HomePageState extends State<HomePage> {
       WidgetModel(id: 2, name: "FutureBuilder"),
       WidgetModel(id: 3, name: "Sliver App Bar"),
       WidgetModel(id: 4, name: "Table Page"),
+      WidgetModel(id: 5, name: "Flexible Widget"),
     ];
     return ListView.builder(
       itemCount: widgetItems.length,
@@ -57,6 +59,9 @@ class _HomePageState extends State<HomePage> {
                   break;
                 case 4:
                   widget = TablePage();
+                  break;
+                case 5:
+                  widget = FlexibleWidgetPage();
                   break;
                 default:
                   widget = SearchBarPage();
