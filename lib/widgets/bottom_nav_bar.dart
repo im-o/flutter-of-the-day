@@ -25,7 +25,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        onTap: (int newIndex){
+        onTap: (int newIndex) {
           setState(() {
             _currentIndex = newIndex;
           });

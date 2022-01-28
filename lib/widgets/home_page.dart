@@ -4,6 +4,7 @@ import 'package:flutter_of_the_day/widgets/animated_cross_faded.dart';
 import 'package:flutter_of_the_day/widgets/bottom_nav_bar.dart';
 import 'package:flutter_of_the_day/widgets/flexible_widget_page.dart';
 import 'package:flutter_of_the_day/widgets/future_builder.dart';
+import 'package:flutter_of_the_day/widgets/popup_menu_button.dart';
 import 'package:flutter_of_the_day/widgets/search_bar.dart';
 import 'package:flutter_of_the_day/widgets/sliver_app_bar.dart';
 import 'package:flutter_of_the_day/widgets/table_page.dart';
@@ -32,7 +33,8 @@ class _HomePageState extends State<HomePage> {
       WidgetModel(id: 3, name: "Sliver App Bar"),
       WidgetModel(id: 4, name: "Table Page"),
       WidgetModel(id: 5, name: "Flexible Widget"),
-      WidgetModel(id: 6, name: "Animated Cross Faded Page"),
+      WidgetModel(id: 6, name: "Animated Cross Faded"),
+      WidgetModel(id: 7, name: "Popup Menu Button"),
     ];
     return ListView.builder(
       itemCount: widgetItems.length,
@@ -67,6 +69,9 @@ class _HomePageState extends State<HomePage> {
                   break;
                 case 6:
                   widget = AnimatedCrossFadedPage();
+                  break;
+                case 7:
+                  widget = PopupMenuButtonPage();
                   break;
                 default:
                   widget = SearchBarPage();
